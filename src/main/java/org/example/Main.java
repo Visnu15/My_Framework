@@ -1,5 +1,6 @@
 package org.example;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
@@ -10,4 +11,5 @@ public class Main {
         ChromeDriver d = new ChromeDriver();
         d.get("https://www.google.com/");
     }
+
 }
