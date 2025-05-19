@@ -2,6 +2,10 @@
   <dictionary name="project">
     <words>
       <w>admintitle</w>
+      <w>confirmpass</w>
+      <w>empname</w>
+      <w>userrole</w>
+      <w>userstatus</w>
     </words>
   </dictionary>
 </component>

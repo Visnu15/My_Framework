@@ -22,6 +22,11 @@ public class Hooks extends BaseClass{
         scenario.attach(ss, "image/png", "Screenshot taken!");
     }
 
+    @After
+    public static void tearDown(){
+        driver.quit();
+    }
+
     public static void log(String msg){
         scenario.log(msg);
     }
