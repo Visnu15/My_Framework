@@ -1,5 +1,6 @@
 package Steps;
 
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -13,7 +14,7 @@ import org.testng.Assert;
 
 import java.time.Duration;
 
-public class MyStepdefs extends BaseClass {
+public class LoginSteps extends BaseClass {
 
 //    public WebDriver d;
 
@@ -30,7 +31,7 @@ public class MyStepdefs extends BaseClass {
             wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h5[text()='Login']")));
             String ExpectedTitle = "OrangeHRM";
             String ActualTitle = driver.getTitle();
-            Assert.assertEquals(ActualTitle, ExpectedTitle, "URL is not loaded successfully");
+            Assert.assertEquals(ActualTitle, ExpectedTitle, "URL is not loaded successfully. Title mismatch.");
             Hooks.log("URL loaded successfully");
             System.out.println("URL loaded successfully");
         }
@@ -42,9 +43,9 @@ public class MyStepdefs extends BaseClass {
         }
     }
 
-    @Given("user logs in using Admin and admin{int}")
-    public void user_logs_in_using_Admin_and_admin(Integer int1) {
-        System.out.println("Test1");
+    @And("user logs in using {string} and {string}")
+    public void userLogsInUsingUsernameAndPassword(String un , String pass) {
+
     }
 
     @When("user navigates to Admin - Add user")
@@ -61,49 +62,4 @@ public class MyStepdefs extends BaseClass {
     public void user_logs_out_from_the_application() {
         System.out.println("Test4");
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    @Given("user opens the application")
-    public void user_opens_the_application() {
-        System.out.println("Given print");
-    }
-
-    @When("user places his order")
-    public void user_places_his_order() {
-        System.out.println("When print");
-    }
-
-    @Then("the order should be placed successfully")
-    public void the_order_should_be_placed_successfully() {
-        System.out.println("Then print");
-    }
-
-
 }
